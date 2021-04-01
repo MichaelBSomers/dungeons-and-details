@@ -19,8 +19,9 @@ run `nodemon server.js` inside backend to start up the DB watcher for auto refre
 
 ### Frontend
 
-React - Framework of our frontend
-Bootstrap - Library for HTML/CSS scalability
+React - Framework of our frontend.
+Bootstrap - Library for bootstrap CSS.
+Reactstrap - Library for utilizing bootstrap react components.
 react-router-dom - Library for managing paging.
 Axios - Used for simplifying creating http/https CRUD calls.
 
