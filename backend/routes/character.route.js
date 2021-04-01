@@ -3,17 +3,16 @@ let express = require('express');
 let router = express.Router();
 
 // Character Model
-let characterSchema = require('../models/Character');
+let characterSchema = require('../Models/Character');
 
 // CREATE Character
 router.route('/create-character').post((req, res, next) => {
   characterSchema.create(req.body, (error, data) => {
     if (error) {
       return next(error);
-    } else {
-      console.log(data);
-      res.json(data);
     }
+    console.log(data);
+    res.json(data);
   });
 });
 
@@ -32,9 +31,8 @@ router.route('/edit-character/:id').get((req, res) => {
   characterSchema.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error);
-    } else {
-      res.json(data);
     }
+    res.json(data);
   });
 });
 
