@@ -9,47 +9,62 @@ import { Container, Button, Row, Col } from 'reactstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 // Pages
-import Home from './pages/home';
+import {
+  HomePage,
+  CharacterSheetPage
+} from './pages';
 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <div className="background">
-    <Router>
-      <Container className="p-3">
-        <Row>
-          <Col>
-            <Link to="/">
-              <Button block>ClanFare</Button>
-            </Link>
-          </Col>
-          <Col>
-            <Link to="/card-viewer">
-              <Button block>Card Viewer</Button>
-            </Link>
-          </Col>
-          <Col>
-            <Link to="/deck-viewer">
-              <Button block>Deck Viewer</Button>
-            </Link>
-          </Col>
-          <Col>
-            <Link to="/card-creator">
-              <Button block>Card Creator</Button>
-            </Link>
-          </Col>
-          <Col>
-            <Link to="/deck-creator">
-              <Button block>Deck Creator</Button>
-            </Link>
-          </Col>
-        </Row>
+    <Router defaultEventKey="/">
+      <Container fluid>
+
+        <Container className="p-3">
+          <Row>
+            <Col>
+              <Link to="/">
+                <Button block>ClanFare</Button>
+              </Link>
+            </Col>
+            <Col>
+              <Link to="/card-viewer">
+                <Button block>Card Viewer</Button>
+              </Link>
+            </Col>
+            <Col>
+              <Link to="/deck-viewer">
+                <Button block>Deck Viewer</Button>
+              </Link>
+            </Col>
+            <Col>
+              <Link to="/card-creator">
+                <Button block>Card Creator</Button>
+              </Link>
+            </Col>
+            <Col>
+              <Link to="/deck-creator">
+                <Button block>Deck Creator</Button>
+              </Link>
+            </Col>
+            <Col>
+              <Link to="/charactersheet">
+                <Button block>Character Sheet</Button>
+              </Link>
+            </Col>
+          </Row>
+        </Container>
 
         <Switch>
-          <Route path="/">
-            <Home />
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/charactersheet">
+            <CharacterSheetPage />
           </Route>
         </Switch>
+
       </Container>
     </Router>
   </div>,
