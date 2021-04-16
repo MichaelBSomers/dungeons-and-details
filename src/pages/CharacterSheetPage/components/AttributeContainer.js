@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {Row, Col} from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
 const AttrContainer = styled.div`
   display: inline-block;
@@ -11,31 +11,31 @@ const AttrContainer = styled.div`
 `;
 
 function AttributeContainer(props) {
-  const {attributes} = props;
+  const { attributes } = props;
   return (
     <AttrContainer>
-        {
-          attributes.map((attr) => ( 
-             <Row key={attr.name}>
-              <Col align='left'>{attr.name}</Col>
-              <Col align='right'>{attr.value()}</Col>
-             </Row>
-          ))
-        }
+      {attributes.map((attr) => (
+        <Row key={attr.name}>
+          <Col align="left">{attr.name}</Col>
+          <Col align="right">{attr.value()}</Col>
+        </Row>
+      ))}
     </AttrContainer>
   );
 }
 
 AttributeContainer.propTypes = {
-  attributes: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    value: PropTypes.function,
-    description: PropTypes.string
-  })),
+  attributes: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      value: PropTypes.function,
+      description: PropTypes.string,
+    }),
+  ),
 };
 
 AttributeContainer.defaultProps = {
-  attributes: []
+  attributes: [],
 };
 
 export default AttributeContainer;

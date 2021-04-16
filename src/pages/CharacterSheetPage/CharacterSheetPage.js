@@ -1,33 +1,15 @@
-import React, {Component} from 'react';
+import React, { useState, useContext } from 'react';
 
-import {
-  AttributeContainer,
-} from './components';
+import { AttributeContainer } from './components';
 
-import {SRD5eCharacterSheet} from '../../models/CharacterSheet';
+import { SRD5eCharacterSheet } from '../../models/CharacterSheet';
+import { characterContext, characterContextActions } from '../../context/characterContext';
 
-class CharacterSheetPage extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      sheet : SRD5eCharacterSheet(),
-    };
-
-  }
-
-  render() {
-    const {sheet} = this.state;
-
-    return (
-      <AttributeContainer
-        attributes={sheet.attributes}
-      />
-    )
-  }
-
+const CharacterSheetPage = () => {
+  const characterState = useContext(characterContext);
+  // This is the hook for state, pretty much the exact same thing as context with limited scope.
+  // const [characterSheet, setCharacterSheet] = useState(SRD5eCharacterSheet());
+  return <AttributeContainer attributes={characterState.attributes} />;
 };
-
 
 export default CharacterSheetPage;

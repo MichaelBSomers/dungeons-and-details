@@ -9,18 +9,15 @@ import { Container, Button, Row, Col } from 'reactstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 // Pages
-import {
-  HomePage,
-  CharacterSheetPage
-} from './pages';
+import { HomePage, CharacterSheetPage } from './pages';
 
 import reportWebVitals from './reportWebVitals';
+import { CharacterContextStateProvider } from './context/characterContext';
 
 ReactDOM.render(
   <div className="background">
     <Router defaultEventKey="/">
       <Container fluid>
-
         <Container className="p-3">
           <Row>
             <Col>
@@ -61,10 +58,11 @@ ReactDOM.render(
             <HomePage />
           </Route>
           <Route path="/charactersheet">
-            <CharacterSheetPage />
+            <CharacterContextStateProvider>
+              <CharacterSheetPage />
+            </CharacterContextStateProvider>
           </Route>
         </Switch>
-
       </Container>
     </Router>
   </div>,
