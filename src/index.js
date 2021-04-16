@@ -14,6 +14,9 @@ import { HomePage, CharacterSheetPage } from './pages';
 import reportWebVitals from './reportWebVitals';
 import { CharacterContextStateProvider } from './context/characterContext';
 
+// TODO: Re-add App.js, fix this crap below.
+// TODO: Implement loading Context.
+
 ReactDOM.render(
   <div className="background">
     <Router defaultEventKey="/">

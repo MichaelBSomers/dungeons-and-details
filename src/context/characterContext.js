@@ -1,6 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 import Attribute from '../models/Attribute';
 
+// TODO: add this to DB.
 const initialState = {
   attributes: [
     new Attribute({
@@ -37,6 +38,8 @@ export const characterContextActions = {
   LOAD_CHARACTER: 'loadCharacter',
   UPDATE_CHARACTER: 'updateCharacter',
 };
+
+// TODO: Implement Initial Load, Update.
 
 const CharacterContextStateProvider = ({ children }) => {
   const [state, dispatch] = useReducer((item, action) => {
