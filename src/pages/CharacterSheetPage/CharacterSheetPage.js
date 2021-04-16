@@ -9,7 +9,7 @@ const CharacterSheetPage = () => {
   const characterState = useContext(characterContext);
   // This is the hook for state, pretty much the exact same thing as context with limited scope.
   // const [characterSheet, setCharacterSheet] = useState(SRD5eCharacterSheet());
-  return <AttributeContainer attributes={characterState.attributes} />;
+  return <AttributeContainer attributes={characterState.state.attributes} />;
 };
 
 export default CharacterSheetPage;
