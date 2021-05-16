@@ -9,8 +9,7 @@ import { Container, Button, Row, Col } from 'reactstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 // Pages
-import { HomePage, CharacterSheetPage } from './pages';
-
+import { HomePage, Items, MonsterCompendium, CharacterSheetPage } from './pages';
 import reportWebVitals from './reportWebVitals';
 import { CharacterContextStateProvider } from './context/characterContext';
 
@@ -25,27 +24,17 @@ ReactDOM.render(
           <Row>
             <Col>
               <Link to="/">
-                <Button block>ClanFare</Button>
+                <Button block>Home</Button>
               </Link>
             </Col>
             <Col>
-              <Link to="/card-viewer">
-                <Button block>Card Viewer</Button>
+              <Link to="/items">
+                <Button block>Items</Button>
               </Link>
             </Col>
             <Col>
-              <Link to="/deck-viewer">
-                <Button block>Deck Viewer</Button>
-              </Link>
-            </Col>
-            <Col>
-              <Link to="/card-creator">
-                <Button block>Card Creator</Button>
-              </Link>
-            </Col>
-            <Col>
-              <Link to="/deck-creator">
-                <Button block>Deck Creator</Button>
+              <Link to="/monsters">
+                <Button block>Monster Compendium</Button>
               </Link>
             </Col>
             <Col>
@@ -59,6 +48,12 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/">
             <HomePage />
+          </Route>
+          <Route exact path="/items">
+            <Items />
+          </Route>
+          <Route exact path="/monsters">
+            <MonsterCompendium />
           </Route>
           <Route path="/charactersheet">
             <CharacterContextStateProvider>
