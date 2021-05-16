@@ -87,7 +87,7 @@ const Items = () => {
           </Col>
           <Col>
             <FormGroup>
-              <Label for="weaponDamage">Weapon Damage</Label>
+              <Label for="weaponDamage">Weapon Damages</Label>
               <Input
                 value={weaponDamage}
                 type="number"
