@@ -93,7 +93,7 @@ const Items = () => {
                 type="number"
                 name="weaponDamage"
                 id="weaponDamage"
-                placeholder={1}
+                placeholder={2}
                 max={100}
                 min={0}
                 onChange={(e) => {
