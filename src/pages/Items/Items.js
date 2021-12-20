@@ -12,8 +12,8 @@ const items = {
             label: '5',
           },
           speed: {
-            value: 4,
-            label: '4',
+            value: 5,
+            label: '5',
           },
         },
         longsword: {
