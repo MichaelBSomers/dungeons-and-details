@@ -8,12 +8,12 @@ const items = {
       oneHanded: {
         rapier: {
           damage: {
-            value: 6,
-            label: '6',
+            value: 5,
+            label: '5',
           },
           speed: {
-            value: 4,
-            label: '4',
+            value: 5,
+            label: '5',
           },
         },
         longsword: {
