@@ -12,17 +12,17 @@ const AttributeContainer = () => {
   //        I'd suggest doing it without first, then committing, then attempting formik.
   //        Formik Docs: https://formik.org/docs/overview
   //        Reactstrap docs: https://reactstrap.github.io
+  //        Bootstrap CSS Classes: https://mdbootstrap.com/docs/react/utilities/spacing/
 
   const submit = (e) => {
     e.preventDefault(); // Prevents the page from auto refreshing when submitted.
-    console.log('info', e.target.name);
   };
 
   return (
     <>
       <form onSubmit={submit}>
         <Row>
-          <Col md={6}>
+          <Col md={3}>
             <Input
               type="text" // Sets the type of input (In this case, it'll be raw text)
               name="Name" // Name of the input, we use this to reference it once submitted.
