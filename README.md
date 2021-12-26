@@ -24,6 +24,7 @@ Bootstrap - Library for bootstrap CSS.
 Reactstrap - Library for utilizing bootstrap react components.
 react-router-dom - Library for managing paging.
 Axios - Used for simplifying creating http/https CRUD calls.
+Formik - Used for all Forms and validation. https://formik.org/docs/overview
 
 ### Backend
 
