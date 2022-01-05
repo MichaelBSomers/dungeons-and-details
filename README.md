@@ -25,6 +25,13 @@ Reactstrap - Library for utilizing bootstrap react components.
 react-router-dom - Library for managing paging.
 Axios - Used for simplifying creating http/https CRUD calls.
 
+# Styles
+
+scss - This project uses scss instead of regular css, this is to allow us to create seperate style sheets easier
+    https://create-react-app.dev/docs/adding-a-sass-stylesheet
+    https://htmlcolorcodes.com/tutorials/scss-color-variables/
+
+
 ### Backend
 
 Express - It’s a robust Node.js web application framework that helps in creating powerful REST APIs.
@@ -57,3 +64,9 @@ Collections:
 Characters
 Classes
 Attributes
+
+
+### Considerations
+    Implement Tailwind instead of bootstrap.
+        https://tailwindcss.com/docs/guides/create-react-app
+    Consider not using SCSS

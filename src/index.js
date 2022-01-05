@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.css';
+import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Container, Button, Row, Col } from 'reactstrap';
@@ -17,9 +17,9 @@ import { CharacterContextStateProvider } from './context/characterContext';
 // TODO: Implement loading Context.
 
 ReactDOM.render(
-  <div className="background">
+  <div className="app">
     <Router defaultEventKey="/">
-      <Container fluid>
+      <Container fluid className="background-primary container-primary">
         <Container className="p-3">
           <Row>
             <Col>

@@ -1,0 +1,13 @@
+@use 'styles/colors.scss';
+
+body {
+  .app {
+    .background-primary {
+      background-color: color-primary;
+    }
+    
+    .container-primary {
+      height: 'vh100';
+    }
+  }
+}
