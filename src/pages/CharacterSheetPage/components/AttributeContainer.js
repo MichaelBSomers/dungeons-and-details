@@ -3,6 +3,12 @@ import { Row, Col, Input, Button } from 'reactstrap';
 
 const AttributeContainer = () => {
   const [name, setName] = useState('');
+  const [characterClass, setCharacterClass] = useState('');
+  const [subcharacterclass, setSubCharacterClass] = useState('');
+  const [race, setRace] = useState('');
+  const [subrace, setSubRace] = useState('');
+  const [alignment, setAlignment] = useState('');
+  const [level, setLevel] = useState('');
 
   // INPUTS REQUIRED: Name, Class, Sub-Class, Race, Level, Sub-race, Alignment.
   // TODO:  Finish the form.
@@ -22,19 +28,85 @@ const AttributeContainer = () => {
     <>
       <form onSubmit={submit}>
         <Row>
-          <Col md={3}>
+          <Col md={3} className="p-3">
             <Input
-              type="text" // Sets the type of input (In this case, it'll be raw text)
+              type="text" // Sets the type of input (Isn this case, it'll be raw text)
               name="Name" // Name of the input, we use this to reference it once submitted.
               value={name} // Sets the value == to the state (name)
+              placeholder="Test"
               onChange={(e) => setName(e.target.value)} // On change sets the useState Item
               required // Makes the input required (Must have a value)
             />
           </Col>
         </Row>
-        {/* Create new inputs here for each of the inputs required for character page 1. */}
         <Row>
-          <Col>
+          <Col md={3} className="p-3">
+            <Input
+              type="text"
+              name="Race"
+              value={race}
+              onChange={(e) => setRace(e.target.value)}
+              required
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={3} className="p-3">
+            <Input
+              type="text"
+              name="Sub-Race"
+              value={subrace}
+              onChange={(e) => setSubRace(e.target.value)}
+              required
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={3} className="p-3">
+            <Input
+              type="text"
+              name="Class"
+              value={characterClass}
+              onChange={(e) => setCharacterClass(e.target.value)}
+              required
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={3} className="p-3">
+            <Input
+              type="text"
+              name="Sub-Class"
+              value={subcharacterclass}
+              onChange={(e) => setSubCharacterClass(e.target.value)}
+              required
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={3} className="p-3">
+            <Input
+              type="text"
+              name="Alignment"
+              value={alignment}
+              onChange={(e) => setAlignment(e.target.value)}
+              required
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={3} className="p-3">
+            <Input
+              type="text"
+              name="Level"
+              value={level}
+              onChange={(e) => setLevel(e.target.value)}
+              required
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col className="p-3">
             <Button
               type="Submit" //  Sets the type of button to submit, which is used when inside a
               //  form to submit the form, calling the function noted on the form tag.
